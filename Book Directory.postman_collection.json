@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "8340dd43-521d-4fbf-8f85-0a4a75e21774",
+		"name": "Book Directory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The God of small Things\",\r\n    \"isbn\": \"12121\",\r\n    \"author\": \"Arundhati Roy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/directory/add",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"directory",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The God of small Things\",\r\n    \"isbn\": \"12121\",\r\n    \"author\": \"Arundhati Roy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/directory/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"directory",
+								"add"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-fPAW+I7pQaStLqzeDqLfPvyOFtc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Apr 2022 04:32:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Data saved successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update a book by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The God of small Things\",\r\n    \"author\": \"Arundhati\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/directory/update/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"directory",
+						"update",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5szch5od0gl25nge89"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update a book by Id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The God of small Things\",\r\n    \"author\": \"Arundhati\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/directory/update/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"directory",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5szch5od0gl25nge89"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"24-PEo2sVBzJKLoCAPzqYNK91VP2yk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Apr 2022 04:32:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Data updated successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "fetch all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/directory/fetch",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"directory",
+						"fetch"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "fetch all books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/directory/fetch",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"directory",
+								"fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "245"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f5-ZlRWfucdiH+NxgIxFj6W9X7cFkg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Apr 2022 04:33:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Data fetched successfully!\",\n    \"data\": [\n        {\n            \"id\": \"5szch5o7ggl25ng90k\",\n            \"title\": \"The God of small Things\",\n            \"isbn\": \"12121\",\n            \"author\": \"Arundhati Roy\"\n        },\n        {\n            \"id\": \"5szch5od0gl25nge89\",\n            \"title\": \"The God of small Things\",\n            \"isbn\": \"12121\",\n            \"author\": \"Arundhati\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "remove a book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/directory/remove/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"directory",
+						"remove",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5szch5od0gl25nge89"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "remove a book",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/directory/remove/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"directory",
+								"remove",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5szch5od0gl25nge89"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"msg\": \"Data removed successfully!\"\"\r\n}"
+				},
+				{
+					"name": "remove a book",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/directory/remove/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"directory",
+								"remove",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5szch5od0gl25nge89"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"msg\": \"Data not found!\"\r\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
